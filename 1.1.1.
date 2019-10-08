@@ -31,6 +31,62 @@
 <ul>
 <li>Stores the current instruction to be executed after being fetched from memory.</li>
 </ul>
+<h2 id="buses">Buses:</h2>
+<ul>
+<li>A common physical pathway</li>
+<li>Shared by signals to and from several components of a computer</li>
+<li>Consists of 3 parts:
+<ul>
+<li><strong>Address Bus, Data Bus, Control Bus</strong></li>
+</ul>
+</li>
+</ul>
+<p><strong>Address Bus:</strong></p>
+<ul>
+<li>Carries memory location to read from or write to.</li>
+<li>Components watch the address bus for an address that they recognize</li>
+</ul>
+<p><strong>Data Bus:</strong></p>
+<ul>
+<li>Carries data between processor and memory</li>
+<li>Components receive data from the data bus…</li>
+<li>…Or they place new data onto the data bus to travel to the processor.</li>
+</ul>
+<p><strong>Control Bus:</strong></p>
+<ul>
+<li>Carries control signals from control unit.</li>
+</ul>
+<h2 id="fetch---decode---execute">Fetch - Decode - Execute</h2>
+<p><strong>Fetch:</strong></p>
+<ul>
+<li>PC (Program Counter) holds the address of the next instruction</li>
+<li>Address copied into the MAR</li>
+<li>Address contents copied to the MDR</li>
+<li>Contents of the MDR copied to the CIR</li>
+<li>Contents of the PC incremented</li>
+</ul>
+<p><strong>Decode:</strong></p>
+<ul>
+<li>CIR contents sent to the CU (<em>Control Unit</em>)</li>
+<li>CU decodes the instruction:
+<ul>
+<li>Checks against set of instructions held in the ROM within the CPU (<em>Microcode</em>)</li>
+</ul>
+</li>
+<li>The CU checks the required data is present for current instruction in the MDR</li>
+</ul>
+<p><strong>Execute:</strong></p>
+<ul>
+<li>Instruction address copied from CIR to MAR</li>
+<li>Data at current MAR adrress copied to the MDR</li>
+<li>Instruction is executed:
+<ul>
+<li>Floating point unit; arithmetic unit; logic unit</li>
+</ul>
+</li>
+<li>Return result to the L1 data cache</li>
+<li>Result sent to RAM / other appropriate location</li>
+</ul>
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
