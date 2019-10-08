@@ -1,0 +1,37 @@
+---
+
+
+---
+
+<h1 id="cpu-architecture">CPU Architecture</h1>
+<h2 id="registers">Registers:</h2>
+<p><strong>Program Counter:</strong></p>
+<ul>
+<li>Contains the address of the next instruction to be executed</li>
+<li>Once the current instruction is read, immediately points to the next instruction</li>
+</ul>
+<p><strong>Accumulator:</strong></p>
+<ul>
+<li>Holds the input / output data currently being processed</li>
+<li>Results from processes are temporarily held in the ACC before being transferred to memory</li>
+</ul>
+<p><strong>Memory Address Register:</strong></p>
+<ul>
+<li>Stores <em>Address</em> pf the current memory location (data or instructions)</li>
+<li>Output goes directly to the address bus (via the buffer to prevent continual dumping</li>
+<li>Allows the CPU to communicate with the address bus</li>
+</ul>
+<p><strong>Memory Data Register:</strong></p>
+<ul>
+<li>Stores the data / instructions fetched from memory before use by the processor.</li>
+<li>Acts as a buffer between processor and memory unit</li>
+<li>Allows the CPU to communicate with the data bus</li>
+</ul>
+<p><strong>Current Instruction Register:</strong></p>
+<ul>
+<li>Stores the current instruction to be executed after being fetched from memory.</li>
+</ul>
+<blockquote>
+<p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
+</blockquote>
+
